@@ -54,3 +54,12 @@ nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,2.2v
 .product-list .product-detail-grid li{overflow-wrap:anywhere}
 .product-list .table-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 @media(max-width:900px){.product-list .product-card{grid-template-columns:minmax(0,1fr)}}
+.exhibition-overlay{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;background:rgba(5,20,36,.72)}
+.exhibition-dialog{position:relative;width:min( min(80vh, 680px), calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:10px;background:#fff;border-radius:8px;box-shadow:0 18px 60px rgba(0,0,0,.32)}
+.exhibition-dialog img{display:block;width:100%;height:auto;max-height:calc(100dvh - 52px);object-fit:contain;border-radius:4px}
+.exhibition-close{position:absolute;top:14px;right:14px;z-index:1;display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(16,56,103,.2);border-radius:50%;background:#fff;color:var(--navy);font-size:28px;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.exhibition-close:hover,.exhibition-close:focus-visible{background:var(--cream);outline:2px solid var(--navy);outline-offset:2px}
+.exhibition-trigger{position:fixed;right:24px;bottom:24px;z-index:50;display:inline-flex;align-items:center;gap:9px;min-height:48px;padding:0 17px;border:0;border-radius:999px;background:var(--navy);color:white;font:700 14px Arial,Helvetica,sans-serif;box-shadow:0 5px 18px rgba(6,35,67,.25);cursor:pointer}
+.exhibition-trigger:hover,.exhibition-trigger:focus-visible{background:var(--blue);outline:2px solid white;outline-offset:2px}
+.exhibition-trigger svg{width:20px;height:20px;flex:none}.exhibition-dot{position:absolute;top:-3px;right:-2px;width:11px;height:11px;border:2px solid white;border-radius:50%;background:#dc3545}
+@media(max-width:650px){.exhibition-overlay{padding:16px}.exhibition-dialog{width:min(calc(100vw - 32px), calc(100dvh - 32px));max-height:calc(100dvh - 32px);padding:7px}.exhibition-dialog img{max-height:calc(100dvh - 46px)}.exhibition-close{top:10px;right:10px;width:38px;height:38px}.exhibition-trigger{right:16px;bottom:16px;min-height:46px;padding-inline:14px}}
