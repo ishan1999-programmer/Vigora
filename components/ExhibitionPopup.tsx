@@ -23,7 +23,7 @@ export function ExhibitionPopup() {
       sessionStorage.setItem(SESSION_KEY, "true");
       setShowButton(true);
       setOpen(true);
-    }, 0);
+    }, 2000);
     return () => window.clearTimeout(timer);
   }, []);
 
